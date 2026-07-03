@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Zap, Mail, Phone, MapPin } from "lucide-react"
+import Image from "next/image"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 const footerLinks = {
   Services: [
@@ -26,9 +27,15 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Zap className="w-5 h-5 text-primary" />
-              <span className="font-bold text-foreground" style={{ letterSpacing: "-0.05em" }}>
-                RSK Associates
+              <Image
+                src="/rsk-logo.svg"
+                alt="RSK Associates"
+                width={40}
+                height={40}
+                className="w-10 h-auto"
+              />
+              <span className="font-bold text-foreground text-sm" style={{ letterSpacing: "-0.05em" }}>
+                RSK
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground mb-4">
