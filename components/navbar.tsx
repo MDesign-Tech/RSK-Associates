@@ -52,6 +52,9 @@ export function Navbar() {
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
+      } else {
+        // If element doesn't exist (e.g., on contact page), navigate to home with hash
+        router.push("/" + href)
       }
     }
   }
