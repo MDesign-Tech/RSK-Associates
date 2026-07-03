@@ -86,7 +86,6 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               asChild
-              variant="ghost"
               size="sm"
               rounded="full"
             >
