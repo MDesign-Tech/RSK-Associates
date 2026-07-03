@@ -60,17 +60,17 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8 py-4" aria-label="Main navigation">
         <div className="flex h-14 items-center justify-between bg-background/60 backdrop-blur-xl border border-border/50 rounded-full px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-2" aria-label="RSK Associates home">
+          <Link href="/" className="flex items-center gap-3" aria-label="RSK Associates home">
             <Image
               src="/rsk-logo.svg"
               alt="RSK Associates"
-              width={48}
-              height={48}
-              className="w-12 sm:w-14 h-auto"
+              width={64}
+              height={64}
+              className="w-16 sm:w-20 h-auto"
               priority
             />
             <span
-              className="font-[family-name:var(--font-pt-mono)] font-bold text-base sm:text-lg text-foreground hidden sm:inline"
+              className="font-[family-name:var(--font-pt-mono)] font-bold text-sm sm:text-base text-foreground hidden sm:inline"
               style={{ letterSpacing: "-0.05em" }}
             >
               RSK
@@ -144,16 +144,16 @@ export function Navbar() {
               aria-label="Mobile navigation menu"
             >
               <div className="flex items-center justify-between px-6 py-4 bg-background border-b border-border/50">
-                <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
                   <Image
                     src="/rsk-logo.svg"
                     alt="RSK Associates"
-                    width={48}
-                    height={48}
-                    className="w-12 h-auto"
+                    width={56}
+                    height={56}
+                    className="w-14 h-auto"
                   />
                   <span
-                    className="font-[family-name:var(--font-pt-mono)] font-bold text-base text-foreground"
+                    className="font-[family-name:var(--font-pt-mono)] font-bold text-sm text-foreground"
                     style={{ letterSpacing: "-0.05em" }}
                   >
                     RSK

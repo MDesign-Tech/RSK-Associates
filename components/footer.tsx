@@ -26,15 +26,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
                 src="/rsk-logo.svg"
                 alt="RSK Associates"
-                width={64}
-                height={64}
-                className="w-16 h-auto"
+                width={80}
+                height={80}
+                className="w-20 h-auto"
               />
-              <span className="font-bold text-foreground text-sm" style={{ letterSpacing: "-0.05em" }}>
+              <span className="font-bold text-foreground text-xs" style={{ letterSpacing: "-0.05em" }}>
                 RSK
               </span>
             </Link>
