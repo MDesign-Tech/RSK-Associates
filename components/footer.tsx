@@ -30,9 +30,9 @@ export function Footer() {
               <Image
                 src="/rsk-logo.svg"
                 alt="RSK Associates"
-                width={40}
-                height={40}
-                className="w-10 h-auto"
+                width={64}
+                height={64}
+                className="w-16 h-auto"
               />
               <span className="font-bold text-foreground text-sm" style={{ letterSpacing: "-0.05em" }}>
                 RSK

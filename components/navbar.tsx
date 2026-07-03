@@ -64,9 +64,9 @@ export function Navbar() {
             <Image
               src="/rsk-logo.svg"
               alt="RSK Associates"
-              width={32}
-              height={32}
-              className="w-8 sm:w-10 h-auto"
+              width={48}
+              height={48}
+              className="w-12 sm:w-14 h-auto"
               priority
             />
             <span
@@ -148,9 +148,9 @@ export function Navbar() {
                   <Image
                     src="/rsk-logo.svg"
                     alt="RSK Associates"
-                    width={32}
-                    height={32}
-                    className="w-8 h-auto"
+                    width={48}
+                    height={48}
+                    className="w-12 h-auto"
                   />
                   <span
                     className="font-[family-name:var(--font-pt-mono)] font-bold text-base text-foreground"
