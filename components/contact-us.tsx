@@ -12,17 +12,17 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@rskassociates.com",
+    value: "rskassociatescpa@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
+    value: "+250 788 492 529",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "123 Business Ave, Suite 100, New York, NY 10001",
+    value: "KIMIRONKO, KG11 Av, NO 60, POBOX 6556 Kigali",
   },
 ]
 

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Command, CornerDownLeft } from "lucide-react"
 import { motion, useReducedMotion } from "framer-motion"
@@ -141,9 +142,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-3"
           >
-            <Button size="xl" rounded="full" className="gap-2 w-full sm:w-auto">
-              Get in Touch
-              <ArrowRight className="w-4 h-4" />
+            <Button asChild size="xl" rounded="full" className="gap-2 w-full sm:w-auto">
+              <Link href="/contact">
+                Get in Touch
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
             {/* <Button variant="outline" size="xl" rounded="full" className="gap-2 bg-transparent w-full sm:w-auto">
               View Docs

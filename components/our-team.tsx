@@ -5,28 +5,46 @@ import Image from "next/image"
 
 const teamMembers = [
   {
-    name: "Sarah Johnson",
-    title: "Chief Executive Officer",
+    name: "Kabasha Rutigunga Alphonse",
+    title: "Managing Director",
     bio: "15+ years of experience in financial consulting and business strategy.",
     image: "/professional-woman-headshot.png",
   },
   {
-    name: "Michael Chen",
-    title: "Head of Audit",
+    name: "Bernard Nyakenywa Obiri",
+    title: "Managing Partner",
     bio: "Certified Public Accountant with expertise in regulatory compliance and auditing.",
     image: "/professional-man-headshot.png",
   },
   {
-    name: "Emma Williams",
-    title: "Tax Advisory Director",
-    bio: "Specialist in tax planning and optimization for businesses of all sizes.",
+    name: "Mutesi Cecily",
+    title: "Audit Manager",
+    bio: "Specialist in audit management and financial compliance.",
     image: "/professional-woman-executive-headshot.png",
   },
   {
-    name: "David Rodriguez",
-    title: "Senior Consultant",
-    bio: "Expert in business management and strategic growth initiatives.",
+    name: "Ringuyeneza Fidele",
+    title: "Audit Manager",
+    bio: "Expert in audit operations and compliance verification.",
     image: "/professional-woman-headshot-2.png",
+  },
+  {
+    name: "Zaninka Magali",
+    title: "Human Resource Manager",
+    bio: "Experienced in human resource management and team development.",
+    image: "/professional-woman-headshot.png",
+  },
+  {
+    name: "Nasingizwe Elise",
+    title: "Accountant",
+    bio: "Skilled in accounting operations and financial record management.",
+    image: "/professional-man-headshot.png",
+  },
+  {
+    name: "Kampire Desange",
+    title: "Auditor",
+    bio: "Dedicated auditor with strong attention to detail and compliance expertise.",
+    image: "/professional-woman-executive-headshot.png",
   },
 ]
 
@@ -49,7 +67,7 @@ export function OurTeam() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}

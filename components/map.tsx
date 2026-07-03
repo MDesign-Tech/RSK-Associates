@@ -17,7 +17,7 @@ const DefaultIcon = L.icon({
 L.Marker.prototype.setIcon(DefaultIcon)
 
 export default function Map() {
-  const position: [number, number] = [40.7128, -74.006]
+  const position: [number, number] = [-1.9506, 30.0609] // Kigali, Rwanda
 
   return (
     <MapContainer
@@ -34,9 +34,9 @@ export default function Map() {
         <Popup>
           <strong>RSK Associates</strong>
           <br />
-          123 Business Ave, Suite 100
+          KIMIRONKO, KG11 Av, NO 60
           <br />
-          New York, NY 10001
+          POBOX 6556 Kigali
         </Popup>
       </Marker>
     </MapContainer>
