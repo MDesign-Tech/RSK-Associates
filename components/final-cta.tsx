@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion, useReducedMotion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -30,9 +31,11 @@ export function FinalCTA() {
               Rolem Ipsummmmmm  hhfsd ksdnfd.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="xl" rounded="full" className="gap-2 min-w-[200px]">
-                Get Started
-                <ArrowRight className="w-4 h-4" />
+              <Button asChild size="xl" rounded="full" className="gap-2 min-w-[200px]">
+                <Link href="/contact">
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </Button>
               {/* <Button variant="outline" size="xl" rounded="full" className="gap-2 min-w-[200px] bg-transparent">
                 Talk to Sales

@@ -1,10 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Moon, Sun, Zap } from "lucide-react"
+import { Menu, X, Moon, Sun } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
@@ -51,6 +52,9 @@ export function Navbar() {
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
+      } else {
+        // If element doesn't exist (e.g., on contact page), navigate to home with hash
+        router.push("/" + href)
       }
     }
   }
@@ -59,13 +63,20 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8 py-4" aria-label="Main navigation">
         <div className="flex h-14 items-center justify-between bg-background/60 backdrop-blur-xl border border-border/50 rounded-full px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-2" aria-label="RSK Associates home">
-            <Zap className="w-5 sm:w-6 h-5 sm:h-6 text-primary" aria-hidden="true" />
+          <Link href="/" className="flex items-center gap-3" aria-label="RSK Associates home">
+            <Image
+              src="/rsk-logo.svg"
+              alt="RSK Associates"
+              width={64}
+              height={64}
+              className="w-16 sm:w-20 h-auto"
+              priority
+            />
             <span
-              className="font-[family-name:var(--font-pt-mono)] font-bold text-base sm:text-lg text-foreground"
+              className="font-[family-name:var(--font-pt-mono)] font-bold text-sm sm:text-base text-foreground hidden sm:inline"
               style={{ letterSpacing: "-0.05em" }}
             >
-              RSK Associates
+              RSK
             </span>
           </Link>
 
@@ -86,7 +97,6 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               asChild
-              variant="ghost"
               size="sm"
               rounded="full"
             >
@@ -137,13 +147,19 @@ export function Navbar() {
               aria-label="Mobile navigation menu"
             >
               <div className="flex items-center justify-between px-6 py-4 bg-background border-b border-border/50">
-                <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                  <Zap className="w-5 h-5 text-primary" aria-hidden="true" />
+                <Link href="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                  <Image
+                    src="/rsk-logo.svg"
+                    alt="RSK Associates"
+                    width={56}
+                    height={56}
+                    className="w-14 h-auto"
+                  />
                   <span
-                    className="font-[family-name:var(--font-pt-mono)] font-bold text-base text-foreground"
+                    className="font-[family-name:var(--font-pt-mono)] font-bold text-sm text-foreground"
                     style={{ letterSpacing: "-0.05em" }}
                   >
-                    RSK Associates
+                    RSK
                   </span>
                 </Link>
                 <div className="flex items-center gap-2">
