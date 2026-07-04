@@ -50,8 +50,8 @@ const teamMembers = [
 
 export function OurTeam() {
   return (
-    <section id="our-team" className="relative py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section id="our-team" className="relative py-20 px-4 sm:px-6 lg:px-8 flex justify-center">
+      <div className="max-w-6xl w-full">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -77,13 +77,13 @@ export function OurTeam() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative mb-4 overflow-hidden rounded-lg">
+              <div className="relative mb-4 overflow-hidden rounded-lg aspect-[3/4]">
                 <Image
                   src={member.image}
                   alt={member.name}
                   width={300}
-                  height={300}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  height={400}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <div className="text-center">
