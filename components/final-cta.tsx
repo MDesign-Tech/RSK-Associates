@@ -28,7 +28,7 @@ export function FinalCTA() {
               Ready to work with Us?
             </h2>
             <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-              Rolem Ipsummmmmm  hhfsd ksdnfd.
+              Transform your financial strategy with expert audit, tax advisory, and business management services tailored to your success.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="xl" rounded="full" className="gap-2 min-w-[200px]">

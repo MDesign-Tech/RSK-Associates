@@ -131,7 +131,7 @@ export function Hero() {
             className="mb-6"
           >
             <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2">
-              <span className="text-gradient-lime">1,000+</span> Tuste Us
+              <span className="text-gradient-lime">1,000+</span> Tusted Us
             </p>
             {/* <p className="text-muted-foreground text-xs sm:text-sm">deploy AI support agents instantly</p> */}
           </motion.div>
