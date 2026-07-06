@@ -40,7 +40,7 @@ export default function Home() {
       {/* <VideoGallery /> */}
       {/* <HowItWorks /> */}
       {/* <UseCases /> */}
-      <Stats />
+      {/* <Stats /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <FAQ />
