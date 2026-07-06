@@ -46,6 +46,18 @@ const teamMembers = [
     bio: "Dedicated auditor with strong attention to detail and compliance expertise.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Kampire%20Desange-kgYIQxeT4B230giNZIQDvNtp2eWyHK.jpg",
   },
+  {
+    name: "Immaculee Murekatete",
+    title: "Accountant",
+    bio: "Skilled accountant with expertise in financial record management and reporting.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/team%20rsk_Immaculee%20MUREKATETE%2C%20Accountant-YEdjNGtlcpGybgSFvjZvCkZRmaHLUt.jpg",
+  },
+  {
+    name: "J. Leonard Dushimirwamana",
+    title: "Auditor",
+    bio: "Experienced auditor committed to thorough financial examination and verification.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/team%20rsk_J.%20Leonard%20DUSHIMI%CE%9C%CE%91%CE%9D%CE%91%2C%20Auditor-Lc1wydpEMTWWS6HxZpX3Gpe8E6C0i4.jpg",
+  },
 ]
 
 export function OurTeam() {
@@ -67,7 +79,7 @@ export function OurTeam() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
