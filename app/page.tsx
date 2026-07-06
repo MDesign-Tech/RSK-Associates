@@ -41,7 +41,7 @@ export default function Home() {
       {/* <HowItWorks /> */}
       {/* <UseCases /> */}
       <Stats />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <FAQ />
       <FinalCTA />
