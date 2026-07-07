@@ -1,69 +1,100 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Moon, Sun } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "#home", label: "Home", isHash: true },
   { href: "#our-services", label: "Our Services", isHash: true },
   { href: "#about-us", label: "About Us", isHash: true },
-]
+];
 
 export function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isDark, setIsDark] = useState(true)
-  const router = useRouter()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = ""
-    }
-  }, [mobileMenuOpen])
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains("dark")
-    setIsDark(isDarkMode)
-  }, [])
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setIsDark(isDarkMode);
+  }, []);
 
   const toggleTheme = () => {
-    const htmlElement = document.documentElement
+    const htmlElement = document.documentElement;
     if (htmlElement.classList.contains("dark")) {
-      htmlElement.classList.remove("dark")
-      setIsDark(false)
+      htmlElement.classList.remove("dark");
+      setIsDark(false);
     } else {
-      htmlElement.classList.add("dark")
-      setIsDark(true)
+      htmlElement.classList.add("dark");
+      setIsDark(true);
     }
-  }
+  };
+
+  const navigateToHome = () => {
+    setMobileMenuOpen(false);
+
+    if (window.location.pathname === "/") {
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      return;
+    }
+
+    router.push("/#home");
+  };
 
   const handleNavClick = (href: string) => {
-    setMobileMenuOpen(false)
+    setMobileMenuOpen(false);
+    if (href === "#home") {
+      navigateToHome();
+      return;
+    }
+
     if (href.startsWith("#")) {
-      const element = document.querySelector(href)
+      const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       } else {
-        // If element doesn't exist (e.g., on contact page), navigate to home with hash
-        router.push("/" + href)
+        router.push("/" + href);
       }
     }
-  }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <nav className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8 py-4" aria-label="Main navigation">
+      <nav
+        className="mx-auto max-w-6xl px-2 sm:px-4 lg:px-8 py-4"
+        aria-label="Main navigation"
+      >
         <div className="flex h-14 items-center justify-between bg-background/60 backdrop-blur-xl border border-border/50 rounded-full px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-3" aria-label="RSK Associates home">
+          <Link
+            href="/"
+            className="flex items-center gap-3"
+            aria-label="RSK Associates home"
+            onClick={(event) => {
+              event.preventDefault();
+              navigateToHome();
+            }}
+          >
             <Image
               src="/rsk-logo.svg"
               alt="RSK Associates"
@@ -95,11 +126,7 @@ export function Navbar() {
 
           {/* Desktop Buttons - hidden below lg */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button
-              asChild
-              size="sm"
-              rounded="full"
-            >
+            <Button asChild size="sm" rounded="full">
               <Link href="/contact">Contact Us</Link>
             </Button>
             <button
@@ -147,7 +174,14 @@ export function Navbar() {
               aria-label="Mobile navigation menu"
             >
               <div className="flex items-center justify-between px-6 py-4 bg-background border-b border-border/50">
-                <Link href="/" className="flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                <Link
+                  href="/"
+                  className="flex items-center gap-3"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    navigateToHome();
+                  }}
+                >
                   <Image
                     src="/rsk-logo.svg"
                     alt="RSK Associates"
@@ -211,5 +245,5 @@ export function Navbar() {
         </AnimatePresence>
       </nav>
     </header>
-  )
+  );
 }
